@@ -1,0 +1,94 @@
+Data structure are different ways of organizing a data on your computer that can be used effectively.
+
+1. Big O:it is the complexity that is going to be less or equal to the worst case.
+2. Big omega: it is a complexity that is going to be atleast more than the best.
+3. Big Theta: it s the complexity within bounds of the worsth and the best cases. 
+
+O(1) -constant time 
+accessing a specific element in array
+array=[1,2,3,4,5]
+array[0] //It takes constant time to access first element
+
+O(N)- Liner Time 
+Loop through array element
+array=[1,2,3,4,5]
+for element in array:
+    print(element)
+//linear time since it is visiting every element of array
+
+O(LogN)- Logarithmic time 
+array = [1,2,3,4,5]
+for index in range(0,len(array),3):
+    print(array[index])
+//logarithmic time since it is visting only some elements
+
+O(N^2)-Quadratic time
+Looking are a every index in the array twice
+for x in array :
+    
+
+O(2^N)-Exponential Time
+def fibonacci(n):
+    if n<=1:
+        return n
+    return fibonacci(n-1)+fibonacci(n-2) 
+
+  
+#include<iostream>
+using namespace std;
+int linearSearch(int arr[],int size,int target){
+for(int i=0; i<size;i++){
+    if (arr[i]==target){
+        return i;
+    }
+}
+return -1;
+}
+int main(){
+    int count=0;
+    int arr[]={3,4,6,7,2,3,2,4,2,9};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int target =2;
+    
+    
+    int result = linearSearch(arr,size,target);
+    if (result != -1){
+        cout<<"Elememt found at index no="<<result<<endl;
+    }
+    else{
+        cout<<"Element not found";
+    }
+    //O(1)+O(n)=O(n)
+}
+
+
+#include<iostream>
+using namespace std;
+int linearSearch(int arr[],int size,int target){
+for(int i=0; i<size;i++){
+    if (arr[i]==target){
+        return i;
+    }
+}
+return -1;
+}
+int main(){
+    int count=0;
+    int arr[]={3,4,6,7,2,3,2,4,2,9};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int target =2;
+    for(int j=0;j<size;j++){
+        if (arr[j]==target){
+            count++;
+        }
+    }
+    cout<<"target count="<<count<<endl;
+    int result = linearSearch(arr,size,target);
+    if (result != -1){
+        cout<<"Elememt found at index no="<<result<<endl;
+    }
+    else{
+        cout<<"Element not found";
+    }
+    //O(1)+O(n)=O(n)
+}

@@ -1,0 +1,116 @@
+int main(){
+    char name[10],ch;
+    int i=0;
+    printf("Enter name");
+    while(i<10){
+        ch = getchar();
+        name[i]=ch;
+        i++;
+    }
+    name[i]='\0';
+    printf("Name: %s",name);
+    return 0;
+}
+
+#include<iostream>
+#include<stdio.h>
+int main(){
+    char str1[50],str2[50];
+    printf("Enter the first string\n");
+    scanf("%s",str1);
+    printf("Enter the second string\n");
+    scanf("%s",str2);
+    if(strcmp(str1,str2)==0){
+        printf("Equal\n");
+    }
+    else{
+        printf("Not eqaul\n");
+    }
+    return 0;
+}
+
+#include<iostream>
+#include<stdio.h>
+int main(){
+    char a[20]="Ashish";
+    char b[20]={'A','s','h','i','s','h','\0'};
+    char c[20];
+    printf("enter string");
+    gets(c);
+    printf("Length of string a=%d\n",strlen(a));
+    printf("Length of string a=%d\n",strlen(b));
+    printf("Length of string a=%d\n",strlen(c));
+    return 0;
+}
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[200];
+    int count=0,i;
+    printf("Enter the string\n");
+    gets(s);
+    for(i=0;s[i]!='\0';i++){
+        if(s[i]==' '){
+            count++;
+        }
+    }
+    printf("number of words in given string are: %d\n",count+1);
+    return 0;
+}
+  
+#include<stdio.h>
+#include<string.h>
+void mystrlen(char*);
+int main(){
+    char str1[20];
+    printf("\n Enter an string:");
+    gets(str1);
+    mystrlen(str1);
+    return 0;
+}
+void mystrlen(char * s1){
+    int length=0;
+    while(*s1!='\0'){
+        length++;
+        s1++;
+    }
+    printf("Length is %d",length);
+}
+  
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[200];
+    int count=0,i;
+    printf("Enter the string\n");
+    gets(s);
+    for(i=0;s[i]!='\0';i++){
+        if(s[i]==' '){
+            count++;
+        }
+    }
+    printf("number of words in given string are: %d\n",count+1);
+    return 0;
+}
+  
+#include<stdio.h>
+void mystrlwr(char *s);
+
+int main(){
+    char ch[20];
+    printf("\nEnter any string");
+    gets(ch);
+    mystrlwr(ch);
+    printf("\nUpper case string is :");
+    puts(ch);
+    return 0;
+}
+void mystrlwr(char *s){
+    while(*s!='\0'){
+        *s=*s+32;
+        s++;
+    }
+}  
+
+

@@ -1,0 +1,81 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+int power(int base,int exp){
+    if(exp==0){
+        return 1;
+    }
+    return base * power(base,exp-1);
+}
+int main(){
+    cout<<power(2,5);
+    return 0;
+}
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+void rev(string n){
+    int size=sizeof(n)/sizeof(n[0]);
+    for(int i=size;i>=0;i--){
+        cout<<n[i];
+    }
+}
+int main(){
+    rev("abcde");
+    return 0;
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool palindrom(char str[],int start,int end){
+    if (start>=end){
+        return true;
+    }
+    if(str[start]!=str[end]){
+        return false;
+    }
+    return palindrom(str, start+1,end-1);
+}
+int main(){
+    char str[]="madam";
+    if(palindrom(str, 0,4)){
+        cout<<"Palindrom";
+    }
+    else{
+        cout<<"not palindrome";
+    }
+    return 0;
+}
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+int main(){
+    char str[100];
+    cout<<"Enter string:";
+    cin>>str;
+    for(int i=0;str[i]!='\0';i++){
+        for (int j=i+1;str[j]!='\0';){
+            if(str[i]==str[j]){
+                int k=j;
+                while(str[k]!='\0'){
+                    str[k]=str[k+1];
+                    k++;
+                }
+            }
+            else{
+                j++;
+            }
+        }
+    }
+    cout<<"After removing duplicates:"<<str;
+    return 0;
+}

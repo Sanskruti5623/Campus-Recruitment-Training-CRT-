@@ -1,0 +1,181 @@
+#include<stdio.h>
+int main(){
+    int i=1;
+    switch(i){
+        case 1:
+            printf("Hi");
+        default:
+            printf("Hello");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    char ch=65;
+    switch(ch){
+        case 'A':
+            printf("Apple");
+            break;
+        case 'B':
+            printf("Bing")
+            break;
+        default:
+            printf("Bye");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    int i=65;
+    switch(i){
+        case 65:
+            printf("integer 65");
+            break;
+        case 'A':
+            printf("char 65");
+            break;
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    int i=65;
+    char ch='B';
+    switch(ch,i){
+        case 65:
+            printf("integer ");
+            break;
+        case 'B':
+            printf("char");
+            break;
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    int i=1;
+    i++;
+    switch(i--){
+        case 1:
+            printf("case 1excuteed");
+            break;
+        case 2:
+            printf("case 2 excuteed");
+            break;
+        default:
+            printf("case default");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    switch(3/2){
+        case 1:
+            printf("case 1excuteed");
+        case 2:
+            printf("case 2 excuteed");
+            break;
+        default:
+            printf("case default");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    int num=0;
+    if(num++,num--,++num)
+    switch(num){
+        case 1:
+            printf("case 1");
+            break;
+        case 2:
+            printf("case 2 ");
+            break;
+        default:
+            printf("default");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    int num=0;
+    switch(num++==5){
+        case 1:
+            printf("True");
+            break;
+        case 2:
+            printf("False");
+            break;
+        default:
+            printf("default");
+    }
+    return 0;
+}
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<int> g1;
+    for (int i=1;i<=5;i++){
+        g1.push_back(i);
+    }
+    cout<<"Output of begin and end";
+    for(auto i=g1.begin();i!=g1.end();i++){
+        cout<<*i<<" ";
+    }
+    cout<<"\n Output of rbegin and rend:";
+    for(auto ir=g1.rbegin();ir!=g1.rend();++ir){
+        cout<<*ir<<" ";
+    }
+    cout<<"\n Size: "<<g1.size();
+    cout<<"\n Capacity :"<<g1.capacity();
+    cout<<"\n Max_size :"<<g1.max_size();
+
+    cout<<"\n at \t: g1.at(4)= :"<<g1.at(3);
+    cout<<"\n front() \t: g1.front="<<g1.front();
+    cout<<"\n back() \t: g1.back="<<g1.back();
+
+    return 0;
+}
+
+#include<iostream>
+using namespace std;
+int main(){
+    int a=10;
+    cout<<"Hex ="<<hex<<a<<endl;
+    cout<<"Octal ="<<oct<<a<<endl;
+    cout<<"decimal ="<<dec<<a<<endl;
+
+    return 0;
+}
+
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+    int a=200;
+    cout<<setw(8)<<a<<endl;
+    cout<<setw(5)<<a<<setw(6)<<a<<endl;
+    cout<<setw(3)<<a<<setw(10)<<a<<endl;
+
+    return 0;
+}
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+    float PI =3.1452;
+    cout<<setprecision(2)<<PI;
+
+    return 0;
+}
